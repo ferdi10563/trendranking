@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trend Rankig</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <h1>トレンドランキング</h1>
+   
+<header>
+  <div class="header-list">
+  <ul>
+    <li><%= link_to 'ホーム', :controller => "homes", :action => "index" %></li>
+    <li><%=link_to 'TikTok', :controller => "tik_toks", :action => "index" %></li>
+    <li><%= link_to 'コスメ', :controller => "cosmes", :action => "index" %></li>
+    <li><%=link_to '食べ物', :controller => "foods", :action => "index" %></li>
+    <li><%= link_to '映画・アニメ・ドラマ', :controller => "movies", :action => "index" %></li>
+    <li><%=link_to '音楽', :controller => "musics", :action => "index" %></li>
+    <li><%= link_to 'YouTube', :controller => "you_tubes", :action => "index" %></li>
+    
+   </ul>
+  </div>
+</header>
+    <%= yield %>
+
+  <footer>
+     <p>Copyright © Ferdi Tayama All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+.header-list a {
+  text-decoration: none;
+}
+</style>

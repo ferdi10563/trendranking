@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>トレンドランキング</title>
+  <style>
+ h2 {
+  color: gray;
+  text-align: center 
+}
+.genre1{
+    display: flex;
+    justify-content: center;
+    text-align:center;
+}
+.genre2{
+    display: flex;
+    justify-content: center;
+    text-align:center;
+}
+.box1 {
+    border: solid 2px gray;
+    width:400px;
+    height:250px;
+    float:left;
+}
+.box2 {
+    border: solid 2px gray;
+    width:400px;
+    height:250px;
+    float:left;
+}
+.box3 {
+    border: solid 2px gray;
+    width:400px;
+    height:250px;
+    float:left;
+}
+
+
+.box4 {
+    border: solid 2px gray;
+    width:400px;
+    height:250px;
+    float:left;
+}
+.box5 {
+    border: solid 2px gray;
+    width:400px;
+    height:250px;
+    float:left;
+}
+.box6 {
+    border: solid 2px gray;
+    width:400px;
+    height:250px;
+    float:left;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.item{
+    border: solid 2px gray;
+    margin: 30px;
+    width:400px;
+    height:250px;
+    
+
+}
+b{
+    margin: 10px;
+    text-align: center
+    font-size: 100px;
+    color: purple;
+}
+p{
+    font-weight: bold;
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+<body>
+  <div id="headline">
+  
+  </div>
+  <div class="main">
+  <h2>ジャンル</h2>
+<div class="genre1">
+ <div class="box1">
+   <%= link_to tik_tok_path do %>
+     <img src="/assets/tiktok.jpg.webp" class="box1">
+     <% end %>
+     </div>
+ <div class="box2">
+  <%= link_to cosme_path do %>
+     <img src="/assets/cosme.jpg" class="box2">
+     <% end %>
+     </div>
+  <div class="box3">
+  <%= link_to food_path do %>
+     <img src="/assets/food.jpg" class="box3">
+     <% end %>
+     </div>
+ 
+</div>
+
+<div class="genre2">
+ <div class="box4">
+  <%= link_to movie_path do %>
+     <img src="/assets/movie.jpg" class="box4">
+     <% end %>
+     </div>
+ <div class="box5">
+   <%= link_to music_path do %>
+     <img src="/assets/music.webp" class="box5">
+     <% end %>
+     </div>
+ <div class="box6">
+    <%= link_to you_tube_path do %>
+      <img src="/assets/youtube.png" class="box6">
+     <% end %>
+     </div>
+
+</div>
+
+
+<div class="container">
+  <div class="item">
+  <b>みんなのトレンド予想！</b>
+  <p>1位</p>
+  <p>2位</p>
+  <p>3位</p>
+  <%= form_for @home do |f| %>
+    <div class="field">
+      <%= f.label :次に流行るのは… %>
+      <%= f.text_field :body, :size => 30 %>
+    </div>
+    <%= f.submit "予想する" %>
+  <% end %>
+
+ 
+  </div>
+
+  <div class="item">
+  <b>急上昇!</b>
+  <p>1位</p>
+  <p>2位</p>
+  <p>3位</p>
+  </div>
+</div>
+ 
+
+
+ 
+</body>
+</html>
+
+
